@@ -1,0 +1,12 @@
+def count_odd_elements(arr):
+    odd_count = 0  
+    for num in arr:
+        if num % 2 != 0:  
+            odd_count += 1  
+    if odd_count > 0:
+        print(f"Odd Elements: {odd_count}")
+    else:
+        print("No odd elements are present")
+n = int(input()) 
+arr = [int(input()) for _ in range(n)]  
+count_odd_elements(arr)
