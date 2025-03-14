@@ -1,0 +1,18 @@
+def min_chairs_needed(simulation):
+    current_chairs = 0
+    min_chairs = 0
+
+    for action in simulation:
+        if action == 'C' or action == 'U':
+            if current_chairs == 0:
+                current_chairs += 1
+            else:
+                current_chairs += 1
+        elif action == 'R' or action == 'L':
+            if current_chairs > 0:
+                current_chairs -= 1
+        min_chairs = max(min_chairs, current_chairs)
+    
+    return min_chairs
+simulation = input().strip()
+print(min_chairs_needed(simulation))
