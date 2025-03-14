@@ -1,0 +1,9 @@
+n = int(input())
+total_sum = 0
+counter = 0
+while counter < n:
+    number = float(input())  
+    total_sum += number  
+    counter += 1  
+average = total_sum / n
+print(f"The average is: {average:.3f}")
